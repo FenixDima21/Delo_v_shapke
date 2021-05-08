@@ -1,0 +1,367 @@
+/* !поппап "Форма заявки" */
+
+.lock {
+	overflow: hidden;
+}
+
+.popup {
+	/* неизменяемые свойства */
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+	overflow-y: auto;
+	overflow-x: hidden;
+	transition: all 0.8s ease 0s;
+	z-index: 20;
+	/* задаем фон попапа */
+	background-color: rgba(86, 185, 142, 0.8);
+}
+
+.popup.open {
+	/* неизменяемые свойства */
+	opacity: 1;
+	visibility: visible;
+	/*при target делаем попап видимым*/
+}
+
+.popup.open .popup__content {
+	/* неизменяемые свойства */
+	transform: translate(0px, 0%);
+	opacity: 1;
+}
+
+.popup__body {
+	min-height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.popup__content, .popup__thanks__content, .popup__video-content {
+	background-color: #fff;
+	position: relative;
+	padding: 40px 50px 50px 55px;
+	border-radius: 24px;
+	/* анимация сверху */
+	opacity: 0;
+	transform: translate(0px, -100%);
+	transition: all 0.8s ease 0s;
+}
+
+.popup__content {
+	max-width: 600px;
+	width: 100%;
+	margin: 0 15px;
+}
+
+.popup__title {
+	font-family: Intro Rust H2;
+	font-size: 24px;
+	line-height: 32px;
+}
+
+.popup__form-title {
+	max-width: 470px;
+}
+
+.popup__form {
+	margin-top: px;
+}
+
+.popup__form form {
+	display: flex;
+	flex-direction: column;
+}
+
+.popup__form input {
+	background-color: inherit;
+	font-size: 16px;
+	line-height: 26px;
+	max-width: 495px;
+	height: 72px;
+	margin-bottom: 21px;
+	border-bottom: 2px solid #96ABA2;
+	color: #96ABA2;
+}
+
+.popup__form input::placeholder {
+	color: #96ABA2;
+}
+
+.popup__button {
+	margin-top: 18px;
+}
+
+/*!кнопка закрытия*/
+
+.popup__btn-close {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	width: 50px;
+	height: 50px;
+	text-decoration: none;
+	background-image: url(../images/header/popup_close_bg.svg);
+}
+
+.popup__btn-close::before, .popup__btn-close::after {
+	content: "";
+	position: absolute;
+	top: 24px;
+	left: 17.5px;
+	width: 16px;
+	height: 3px;
+	border-radius: 2px;
+	background-color: #32AB77;
+	transition: all 0.8s;
+}
+
+.popup__btn-close::before {
+	transform: rotate(45deg);
+}
+
+.popup__btn-close::after {
+	transform: rotate(-45deg);
+}
+
+.popup__btn-close:hover::before {
+	transform: rotate(135deg);
+	background-color: #F0AE64;
+}
+
+.popup__btn-close:hover::after {
+	transform: rotate(55deg);
+	background-color: #F0AE64;
+}
+
+/* !попап "Спасибо, ваша заявка отправлена" */
+
+.popup__thanks__content {
+	width: 600px;
+}
+
+.popup__thanks-logo {
+	margin-bottom: 23px;
+}
+
+.popup__thanks-title {
+	font-family: Intro Rust H2;
+	font-size: 24px;
+	line-height: 32px;
+	padding-bottom: 42px;
+	border-bottom: 1px solid #EFF5F2;
+	;
+	margin-bottom: 27px;
+}
+
+.popup__thanks-text {
+	font-size: 16px;
+	line-height: 36px;
+	margin-bottom: 4px;
+}
+
+.popup__thanks-link {
+	font-family: Intro Rust H2;
+	font-size: 36px;
+	line-height: 36px;
+	background: linear-gradient( 129.81deg, #F4A261 27.27%, #E9C46A 115.15%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.popup__thanks-link:hover {
+	text-decoration: overline;
+}
+
+/* !попап продукта */
+
+.popup__product-content {
+	max-width: 750px;
+	padding: 42px 0px 0px;
+	display: flex;
+	flex-direction: column;
+}
+
+.popup__product-inner {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #EFF5F2;
+	margin-bottom: 30px;
+}
+
+.popup__product-info {
+	padding-left: 50px;
+	min-width: 320px;
+}
+
+.popup__products-title {
+	margin-bottom: 12px;
+}
+
+.popup__product-text {
+	font-size: 16px;
+	line-height: 32px;
+	color: #96ABA2;
+}
+
+.popup__product-text span {
+	color: #103D2A;
+}
+
+.popup__product-foto {
+	width: 140px;
+	height: 140px;
+	border: 1px solid #EFF5F2;
+	margin-right: 90px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+.popup__product-foto img {
+	width: 88px;
+	height: 111px;
+}
+
+.popup__product-button {
+	margin: 0 auto;
+}
+
+/* попап видео */
+
+.popup__video-content {
+	max-width: 1400px;
+	height: auto;
+	padding: 0;
+	margin: 15px 30px;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.popup__video-inner {
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
+
+.popup__video-inner iframe {
+	max-width: 100%;
+	border-radius: 24px;
+}
+
+.popup__video-btn-close {
+	top: -50px;
+	right: -50px;
+}
+
+.popup__video-btn-close::before, .popup__video-btn-close::after {
+	background-color: #fff;
+}
+
+/* !MEDIA */
+
+@media (max-width:1400px) {
+	.popup__video-content {
+		height: 600px;
+	}
+}
+
+@media (max-width: 1050px) {
+	.popup__video-content, .popup__video-inner iframe {
+		height: 550px;
+	}
+}
+
+@media (max-width: 750px) {
+	.popup__video-content, .popup__video-inner iframe {
+		height: 400px;
+	}
+}
+
+@media (max-width: 700px) {
+	.popup__product-foto {
+		margin-right: 60px;
+	}
+	.popup__product-info {
+		padding-right: 15px;
+	}
+}
+
+@media (max-width: 630px) {
+	.popup__product-foto {
+		margin-right: 0px;
+	}
+	.popup__product-info {
+		padding: 0px;
+		margin-bottom: 20px;
+		min-width: 200px;
+	}
+	.popup__product-content {
+		padding: 30px 0px 0px;
+	}
+	.popup__video-content, .popup__video-inner iframe {
+		height: 320px;
+	}
+}
+
+@media (max-width: 550px) {
+	.popup__title {
+		font-family: Intro Rust H2;
+		font-size: 18px;
+		line-height: 24px;
+		margin-right: 15px;
+	}
+	.popup__thanks-link {
+		font-size: 30px;
+		line-height: 32px;
+	}
+}
+
+@media (max-width: 400px) {
+	.popup__content, .popup__thanks__content, .popup__video-content {
+		padding: 50px 30px 30px 30px;
+	}
+	.popup__video-content {
+		padding: 0px 0px 0px 0px;
+	}
+	.popup__button {
+		width: 236px;
+	}
+	.popup__product-content {
+		padding: 50px 30px 0px 30px;
+	}
+	.popup__product-text {
+		max-width: 200px;
+	}
+}
+
+@media (max-width: 350px) {
+	.popup__thanks-logo {
+		width: 60px;
+		height: 60px;
+	}
+	.popup__thanks-logo img {
+		width: 100%;
+	}
+	.popup__thanks-title {
+		padding-bottom: 20px;
+		margin-bottom: 15px;
+	}
+}
+
+@media (max-width: 320px) {
+	.popup__thanks-link {
+		font-size: 26px;
+		line-height: 28px;
+	}
+	.popup__video-content, .popup__video-inner iframe {
+		height: 250px;
+	}
+}
