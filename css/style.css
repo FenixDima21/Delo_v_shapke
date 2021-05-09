@@ -2497,12 +2497,12 @@ html {
 }
 
 @media (max-width: 950px) {
-	.products__tab2-button-prev.swiper-button-prev {
+	.products__tab1-button-prev.swiper-button-prev, .products__tab2-button-prev.swiper-button-prev {
 		left: 0px;
 		top: auto;
 		bottom: 0px;
 	}
-	.products__tab2-button-next.swiper-button-next {
+	.products__tab1-button-next.swiper-button-next, .products__tab2-button-next.swiper-button-next {
 		left: 70px;
 		right: auto;
 		top: auto;
@@ -2696,13 +2696,13 @@ html {
 	.products__open-link-inner {
 		margin-top: 120px;
 	}
-	.products__tab2-button-prev.swiper-button-prev {
+	.products__tab1-button-prev.swiper-button-prev, .products__tab2-button-prev.swiper-button-prev {
 		left: 20%;
 		right: auto;
 		top: auto;
 		bottom: 90px;
 	}
-	.products__tab2-button-next.swiper-button-next {
+	.products__tab1-button-next.swiper-button-next, .products__tab2-button-next.swiper-button-next {
 		left: auto;
 		right: 20%;
 		top: auto;
