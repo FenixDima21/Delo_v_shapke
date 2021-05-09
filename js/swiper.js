@@ -62,8 +62,8 @@ const tabSlider2 = document.querySelector('.tab2__slider2-container');
 let productTab1Slider = new Swiper(tabSlider1, {
 	//СТРЕЛКИ
 	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev'
+		nextEl: '.products__tab1-button-next',
+		prevEl: '.products__tab1-button-prev'
 	},
 	//ВКЛЮЧЕНИЕ/ ОТКЛЮЧЕНИЕ ПЕРЕТАСКИВАНИЯ НА ПК
 	simulateTouch: false,
@@ -114,8 +114,8 @@ let productTab1Slider = new Swiper(tabSlider1, {
 let productTab2Slider = new Swiper(tabSlider2, {
 	//СТРЕЛКИ
 	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev'
+		nextEl: '.products__tab2-button-next',
+		prevEl: '.products__tab2-button-prev'
 	},
 	//ВКЛЮЧЕНИЕ/ ОТКЛЮЧЕНИЕ ПЕРЕТАСКИВАНИЯ НА ПК
 	simulateTouch: false,
