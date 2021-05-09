@@ -695,12 +695,12 @@ body {
 	line-height: 32px;
 }
 
-.products__tab2-button-prev.swiper-button-prev {
+.products__tab1-button-prev.swiper-button-prev, .products__tab2-button-prev.swiper-button-prev {
 	top: 270px;
 	left: -120px;
 }
 
-.products__tab2-button-next.swiper-button-next {
+.products__tab1-button-next.swiper-button-next, .products__tab2-button-next.swiper-button-next {
 	top: 270px;
 	right: -120px;
 }
@@ -3137,6 +3137,7 @@ html {
 	}
 	.top__video-text {
 		text-align: left;
+		margin: 0 15px;
 	}
 	.top__items {
 		padding-bottom: 0px;
@@ -3221,6 +3222,9 @@ html {
 	}
 	.faq__accordion-item.active .faq__accordion-text {
 		height: 260px;
+	}
+	.header__list-box {
+		margin-top: 40px;
 	}
 }
 
